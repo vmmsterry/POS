@@ -73,11 +73,37 @@ namespace POS
                     else if(paymentAccum > itemPrice)
                     {
                         //your change
+                        string changeLine = "";
                         var change = paymentAccum - itemPrice;
+                        
+                        for(int x= denomination.Count-1; x >= 0; x--)
+                        {
+                            if (change >= denomination[x])
+                            {
+                                int res = Convert.ToInt32(change / denomination[x]);
+                                if (res > 0)
+                                {
+                                    change -= (denomination[x] * res);
+                                    if (denomination[x] < 1)
+                                    {
+                                        changeLine += string.Format("{0} coins {1} {2}   ", res, currencySymbol, denomination[x].ToString("N2"));
+                                    }
+                                    else
+                                    {
+                                        changeLine += string.Format("{0} bill {1} {2}   ", res, currencySymbol, denomination[x].ToString("N2"));
+                                    }
+                                }
+                            }
+                        }
 
-
+                        Console.WriteLine(string.Format("Your change: {0}", changeLine));
                     }
-                    
+                    else if (paymentAccum == itemPrice)
+                    {
+                        var changeLine = paymentAccum - itemPrice;
+                        Console.WriteLine(string.Format("Your change: {0} {1}", currencySymbol, changeLine.ToString("N2")));
+                    }
+
                 }
                 else
                 {
