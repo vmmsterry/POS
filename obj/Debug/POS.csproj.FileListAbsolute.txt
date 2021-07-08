@@ -1,0 +1,7 @@
+C:\Users\Vic-Estudio\source\repos\POS\bin\Debug\POS.exe.config
+C:\Users\Vic-Estudio\source\repos\POS\bin\Debug\POS.exe
+C:\Users\Vic-Estudio\source\repos\POS\bin\Debug\POS.pdb
+C:\Users\Vic-Estudio\source\repos\POS\obj\Debug\POS.csproj.AssemblyReference.cache
+C:\Users\Vic-Estudio\source\repos\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
+C:\Users\Vic-Estudio\source\repos\POS\obj\Debug\POS.exe
+C:\Users\Vic-Estudio\source\repos\POS\obj\Debug\POS.pdb
